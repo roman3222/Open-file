@@ -14,10 +14,10 @@ def food_book():
             cook_book.readline()
             print(book)
     return
+food_book()
 
-def get_shop_list_by_dishes(dishes, person_count):
-    for i in book:
-        print(i['Омлет'])
+for i in book:
+    print(i['Омлет'])
 
 
 
