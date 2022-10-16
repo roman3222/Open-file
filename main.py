@@ -3,21 +3,26 @@ def food_book():
         global book
         book = {}
         for line in cook_book:
-            dish_name = line
-            book = {dish_name: []}
+            dish_name = line.strip()
+            book[dish_name] = []
             ingredient_count = cook_book.readline()
             for i in range(int(ingredient_count)):
                 emp = cook_book.readline()
                 ingredient, quantity, measure = emp.split('|')
-                dinner = {'ingredient': ingredient, 'quantity': int(quantity), 'measure': measure}
+                dinner = {'ingredient': ingredient, 'quantity': int(quantity), 'measure': measure.strip()}
                 book[dish_name].append(dinner)
             cook_book.readline()
-            print(book)
-    return
+    print(book)
+    return book
 food_book()
 
-for i in book:
-    print(i['Омлет'])
+def get_shop_list_by_dishes(dishes, person_count):
+    for i in book:
+        if dishes in i:
+            
+
+
+
 
 
 
