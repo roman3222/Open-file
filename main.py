@@ -17,19 +17,20 @@ def food_book():
 food_book()
 
 def get_shop_list_by_dishes(dishes, person_count):
-    for dish in book:
-        return dish
+    for dish in dishes:
+        for menu, ingredient in book.items():
+            if dish in menu:
+                print(dish)
+                for ingredients in ingredient:
+                    ingredients['quantity'] *= person_count
+                    print(ingredients)
+
+
+get_shop_list_by_dishes(['Утка по-пекински', 'Омлет'], 6)
 
 
 
 
-print(get_shop_list_by_dishes(['Утка по-пекински'], 2))
-
-
-
-dct = {1:[1, 2, 3, 4], 4: [6, 7, 8]}
-res = list(dct)
-print(res)
 
 
 
